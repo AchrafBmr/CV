@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background: #003049;
+    color: white;
+    padding: 20px 40px;
+    border-bottom: 5px solid #005fa3;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo {
+    margin-right: 20px;
+}
+
+.photo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info li {
+    margin: 5px 0;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-aside, .right-aside {
+    flex: 1;
+    margin: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    position: relative;
+}
+
+ul li::before {
+    content: '•';
+    color: #0077cc;
+    position: absolute;
+    left: -15px;
+}
+
+/* Icons */
+.icon {
+    margin-right: 8px;
+    color: #0077cc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .flex-row {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;    /* Center-align items */
+    }
+
+    header {
+        text-align: center;     /* Center the header text */
+    }
+    header ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;            /* Remove padding */
+        margin: 0;             /* Remove margin */
+    }
+    
+    header li {
+        margin: 0;             /* Remove margin from list items */
+    }
+
+    .header-top {
+        flex-direction: column; /* Stack photo and info vertically */
+        align-items: center;    /* Center content */
+    }
+
+    .photo img {
+        width: 80px;           /* Adjusted size for better fit */
+        height: 80px;          /* Adjusted size for better fit */
+        border-radius: 50%;    /* Circular profile picture */
+        margin-bottom: 10px;   /* Space below the photo */
+    }
+
+    h1 {
+        font-size: 2rem;       /* Slightly smaller font size */
+        margin: 10px 0;        /* Margin for spacing */
+    }
+
+    h2 {
+        font-size: 1.2rem;     /* Adjusted font size for subheadings */
+        color: #0077cc;        /* Color for a fresh look */
+    }
+
+    main {
+        padding: 20px;         /* Consistent padding for main content */
+        width: 100%;           /* Full width for better use of space */
+        max-width: 600px;      /* Max width for better readability */
+        background: #ffffff;   /* White background for contrast */
+        border-radius: 10px;   /* Rounded corners */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    }
+
+    .left-aside, .right-aside {
+        width: 100%;           /* Full width for each column */
+        margin: 10px 0;       /* Space between sections */
+    }
+
+    .competences ul, .experience ul {
+        max-height: 200px;     /* Set a maximum height for scrollable lists */
+        overflow-y: auto;      /* Enable vertical scrolling */
+        border: 1px solid #ddd; /* Optional: add a border */
+        border-radius: 8px;    /* Rounded corners for lists */
+        background-color: #f9f9f9; /* Light background for contrast */
+        padding: 10px;         /* Padding for list items */
+    }
+
+    .competences ul li, .experience ul li {
+        font-size: 0.9rem;     /* Adjust font size for readability */
+        padding: 8px;          /* Padding inside each list item */
+        margin-bottom: 5px;    /* Space between list items */
+        border-radius: 5px;    /* Rounded corners for list items */
+        transition: background 0.3s; /* Smooth background transition */
+    }
+
+    .competences ul li:hover, .experience ul li:hover {
+        background-color: #e0f7fa; /* Change background on hover */
+    }
+}
